@@ -1,0 +1,42 @@
+set-up.txt
+2019-05-21
+
+# install brew on Mac
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# setting up git
+git config --global user.name "Sipley"
+git config --global user.email "Breanna.Sipley@gmail.com"
+
+# check set up
+git config --list
+
+# set up text editor
+git config --global core.editor "nano -w"
+
+# allow git to use pretty colors when it tells you stuff
+git config --global color.ui "true"
+
+# create alias
+git config --global alias.dag "log --oneline --graph --decorate"
+
+# create folder for pipeline
+# PWD: /Users/breanna/Documents/MS/pipeline
+
+# make repository
+git init
+
+git status
+git add .
+git commit
+git log
+
+# to unstage
+git rm --cached <file>
+
+# to see differences between working directory & the index (staging area)
+git diff
+
+# if accidentally set wrong remote
+git remote set-url origin <link to correct repository>
+
