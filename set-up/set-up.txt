@@ -23,13 +23,15 @@ git config --global alias.dag "log --oneline --graph --decorate"
 # create folder for pipeline
 # PWD: /Users/breanna/Documents/MS/pipeline
 
-# make repository
+# basic commands
 git init
-
+git clone <link to repository>
 git status
 git add .
 git commit
 git log
+git push origin master
+
 
 # to unstage
 git rm --cached <file>
