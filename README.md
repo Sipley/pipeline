@@ -10,17 +10,19 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) across flatworm d
 
 ## Summary
 
-1. Acquire 47 flatworms transcriptomes
-2. Pull out predicted VAPs from all 47 transcriptomes (non-redundant)
-3. Infer the best gene tree for VAPs
-4. Test prediction that there are two main groups of VAPs, one of which is secretory and one of which is intracellular
-5. Test prediction that rates of amino acid substitutions in secretory VAPs is greater on average than in intracellular VAPs 
+1. Acquire a large dataset of sequences
+2. Pull out Gene Family of Interest from all sequences (non-redundant)
+3. Infer the best gene tree for your Gene Family of Interest
+4. Color best gene tree based on signal peptide predictions
+5. Compare average rates of amino acid substitutions
 
-## Step 1: Acquire 47 flatworm transcriptomes
+## Step 1: Acquire a large dataset of sequences
 
-NOTE: These transcriptomes are private, and the link to access them will only be provided for the instructors of this course.
+### For this tutorial, we will use a database that consists of 47 transcriptomes from flatworms
 
-If you are one of the instructors of this course, please run the following code in your terminal.
+NOTE: These transcriptomes are private, and the link to access them will only be provided to the instructors of this course.
+
+Download the dataset of interest by running the following code in your terminal.
 
 ```bash
 mkdir transcriptomes
@@ -29,3 +31,21 @@ curl -L <link to transcriptomes>?dl=1 > transcriptomes.zip
 unzip transcriptomes.zip
 rm transcriptomes.zip
 ```
+
+To confirm that the transcriptomes were downloaded successfully, please run the following code:
+```bash
+md5sum -c md5sum.txt
+```
+NOTE: if you're on a mac and received a 'command not found' error, please run 'brew install md5sha1sum' and try again).
+
+Your output should look like
+```bash
+transcriptomes-MS.tgz: OK
+```
+
+If not, the transcriptomes were not downloaded correctly, and you should proceed with extreme caution.
+
+You will also need a file that contains sequences for your Gene Family of Interest.
+
+In this example, our Gene Family of Interest is Venom Allergen-like Proteins (VAPs).  You can download these files using
+```bash
