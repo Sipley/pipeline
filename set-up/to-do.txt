@@ -1,0 +1,4 @@
+Figure out how to generalize pipeline with a smaller dataset?
+Consider dependencies 
+Local machine?
+
