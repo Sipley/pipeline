@@ -2,11 +2,11 @@
 
 ## Disclaimer
 
-This was created in partial fulfillment of the requirements for a Scripting for Biologists graduate-level course, which I co-opted to improve the bioinformatics pipeline used in my MS thesis.  As such, it's probably only useful for me.
+This was created in partial fulfillment of the requirements for a Scripting for Biologists graduate-level course, which I co-opted to improve the bioinformatics pipeline used in my MS thesis.  I have generalized many parts of this pipeline but in it's current state it's probably only super useful for me.  Check back later for a more generally useful pipeline.
 
 ## Purpose
 
-To survey the diversity of Venom Allergen-like Proteins (VAPs) across flatworm diversity
+To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Schistosoma mansoni_
 
 ## Summary
 
@@ -18,9 +18,13 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) across flatworm d
 
 ## Step 1: Acquire a large dataset of sequences
 
-### For this tutorial, we will use a database that consists of 47 transcriptomes from flatworms
+### For this tutorial, we will use the publicly available transcriptome of 'Schistosoma mansoni'
 
-NOTE: These transcriptomes are private, and the link to access them will only be provided to the instructors of this course.
+We're actually going to use the pipeline itself to generate our datasets.
+
+Please copy this GitHub repository to your local machine 
+
+### This tutorial can be extended to a much larger number of transcriptomes.  Many of said transcriptomes are private as they are unpublished, and the link to access them will only be provided to the instructors of this course.
 
 Download the dataset of interest by running the following code in your terminal.
 
@@ -45,7 +49,5 @@ transcriptomes-MS.tgz: OK
 
 If not, the transcriptomes were not downloaded correctly, and you should proceed with extreme caution.
 
-You will also need a file that contains sequences for your Gene Family of Interest.
-
-In this example, our Gene Family of Interest is Venom Allergen-like Proteins (VAPs).  You can download these files using
+In this example, our Gene Family of Interest is Venom Allergen-like Proteins (VAPs).  
 ```bash
