@@ -22,7 +22,18 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 We're actually going to use the pipeline itself to generate our datasets.
 
-Please copy this GitHub repository to your local machine 
+Please *fork* this repository and clone the directory from your GitHub to your local machine. Then cd into the 'scripts' directory and run 'pipeline.sh' (ignore the warning message):
+```bash
+git clone https://github.com/<YOUR GITHUB USERNAME>/pipeline.git
+cd pipeline/data
+bash pipeline.sh
+```
+
+*Output:* two files in 'data/':
+1. query.fasta
+This contains the protein sequence for the only solved structure of a 'Venom allergen-like Protein' from flatworms, to my knowledge. 
+2. schistosoma_mansoni.PRJEA36577.WBPS13.CDS_transcripts.fa.gz
+This is the most recent transcriptome assembly for 'Schistosoma mansoni', which arguably has the most well-annotated genome of all flatworms.
 
 ### This tutorial can be easily extended to a much larger number of transcriptomes
 
@@ -43,7 +54,7 @@ md5sum -c md5sum.txt
 ```
 NOTE: if you're on a mac and received a 'command not found' error, please run 'brew install md5sha1sum' and try again).
 
-Your output should look like
+Your output should look like:
 ```bash
 transcriptomes-MS.tgz: OK
 ```
