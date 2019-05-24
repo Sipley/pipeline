@@ -35,6 +35,7 @@ bash pipeline.sh
 This contains the protein sequence for the only solved structure of a 'Venom allergen-like Protein' from flatworms, to my knowledge. 
 
 2. `schistosoma_mansoni.PRJEA36577.WBPS13.CDS_transcripts.fa.gz`
+
 This is the most recent transcriptome assembly for _Schistosoma mansoni_, which arguably has the most well-annotated genome of all flatworms.
 
 
@@ -46,7 +47,7 @@ Download the dataset of interest by running the following code in your terminal:
 ```bash
 mkdir transcriptomes
 cd transcriptomes
-curl -L <link to transcriptomes>?dl=1 > transcriptomes.zip
+curl -L <LINK-TO-TRANSCRIPTOMES>?dl=1 > transcriptomes.zip
 unzip transcriptomes.zip
 rm transcriptomes.zip
 ```
