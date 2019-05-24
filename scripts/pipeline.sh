@@ -1,6 +1,6 @@
 # Make a tmp folder that will hold intermediate files & inter 'scripts' directory
-mkdir tmp
-cd scripts
+mkdir ../tmp
+# cd scripts
 
 # Download query sequence of interest from GenBank
 python3 get_query.py > ../data/query.fasta
