@@ -13,6 +13,15 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 * BLAST+ 
 
   - BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ (REQUIRED)
+  
+    Add to path by inserting the following into your `~/.bash_profile`:
+    ```
+    PATH="/usr/local/ncbi/blast/bin:${PATH}"
+    export PATH
+    ```
+  
+    Then exit terminal & re-enter or run `source ~/bash_profile`
+  
   - MagicBlast: https://ncbi.github.io/magicblast/ (OPTIONAL)
   - IgBlast: https://ncbi.github.io/igblast/ (OPTIONAL)
   
