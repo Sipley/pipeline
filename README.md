@@ -24,10 +24,11 @@ We're actually going to use the pipeline itself to generate our datasets.
 
 Please copy this GitHub repository to your local machine 
 
-### This tutorial can be extended to a much larger number of transcriptomes.  Many of said transcriptomes are private as they are unpublished, and the link to access them will only be provided to the instructors of this course.
+### This tutorial can be easily extended to a much larger number of transcriptomes
 
-Download the dataset of interest by running the following code in your terminal.
+NOTE: Said transcriptomes are private as many of them are currently unpublished, and the link to access them will only be provided to the instructors of this course.  However, check back after the associated manuscript is published.
 
+Download the dataset of interest by running the following code in your terminal:
 ```bash
 mkdir transcriptomes
 cd transcriptomes
@@ -36,8 +37,7 @@ unzip transcriptomes.zip
 rm transcriptomes.zip
 ```
 
-To confirm that the transcriptomes were downloaded successfully, please run the following code:
-```bash
+To confirm that the transcriptomes were downloaded successfully, please run the following code: ```bash
 md5sum -c md5sum.txt
 ```
 NOTE: if you're on a mac and received a 'command not found' error, please run 'brew install md5sha1sum' and try again).
@@ -46,8 +46,4 @@ Your output should look like
 ```bash
 transcriptomes-MS.tgz: OK
 ```
-
-If not, the transcriptomes were not downloaded correctly, and you should proceed with extreme caution.
-
-In this example, our Gene Family of Interest is Venom Allergen-like Proteins (VAPs).  
-```bash
+If not, the transcriptomes were not downloaded correctly, and you should proceed with extreme caution. 
