@@ -63,12 +63,16 @@ curl -L https://www.dropbox.com/sh/wf16xd90ay5l6hq/AAChvrMPds2TgjlcaB3gY6R6a?dl=
 unzip transcriptomes.zip
 rm transcriptomes.zip
 
-======
+=======
 
 # install md5sum so same across platforms if on mac
 brew install md5sha1sum
 
 # check md5sum ok
 md5sum -c md5sum.txt
+
+=======
+
+# ignore the files propagated in 'data' when commit
 
 
