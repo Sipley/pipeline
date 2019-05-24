@@ -1,6 +1,7 @@
 # exclude everything
 
-data/*
+data/query.txt
+data/schistosoma_mansoni.PRJEA36577.WBPS13.CDS_transcripts.fa.gz
 
 # exception to the rule
 
