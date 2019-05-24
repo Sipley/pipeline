@@ -1,19 +1,11 @@
-get_transcriptome.py
-
 #python3 -m pip install --user wormbase-parasite
 #python3 -m pip install --user requests
 #python3
 
-'''
-import urllib.request as urllib2
-response = urllib2.urlopen('https://parasite.wormbase.org/ftp.html')
-html = response.read()
-'''
 
 import wormbase_parasite
 import requests
 import urllib
-import os
 from ftplib import FTP
 
 api = wormbase_parasite.WormbaseClient()
@@ -35,4 +27,3 @@ url=server+ext+filename
 with urllib.request.urlopen(url) as response, open(filename, 'wb') as out_file:
 	data = response.read()
 	out_file.write(data)
-
