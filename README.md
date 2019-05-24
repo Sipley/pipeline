@@ -37,7 +37,8 @@ unzip transcriptomes.zip
 rm transcriptomes.zip
 ```
 
-To confirm that the transcriptomes were downloaded successfully, please run the following code: ```bash
+To confirm that the transcriptomes were downloaded successfully, please run the following code: 
+```bash
 md5sum -c md5sum.txt
 ```
 NOTE: if you're on a mac and received a 'command not found' error, please run 'brew install md5sha1sum' and try again).
