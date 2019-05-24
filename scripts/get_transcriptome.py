@@ -6,6 +6,7 @@
 import wormbase_parasite
 import requests
 import urllib
+import os
 from ftplib import FTP
 
 api = wormbase_parasite.WormbaseClient()
@@ -24,6 +25,7 @@ ext='%s/species/%s/%s/' % (release, species, id)
 filename='%s.%s.%s.CDS_transcripts.fa.gz' % (species, id, release)
 url=server+ext+filename
 
+os.chdir('../data')
 with urllib.request.urlopen(url) as response, open(filename, 'wb') as out_file:
 	data = response.read()
 	out_file.write(data)
