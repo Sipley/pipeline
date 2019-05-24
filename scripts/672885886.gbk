@@ -1,0 +1,78 @@
+LOCUS       4P27_A                   162 aa            linear   INV 06-OCT-2014
+DEFINITION  Chain A, Venom Allergen-like (val) 4 Protein.
+ACCESSION   4P27_A
+VERSION     4P27_A
+DBSOURCE    pdb: molecule 4P27, chain 65, release Sep 28, 2014;
+            deposition: Mar 2, 2014;
+            class: Allergen;
+            source: Mmdb_id: 122178, Pdb_id 1: 4P27;
+            Exp. method: X-Ray Diffraction.
+KEYWORDS    .
+SOURCE      Schistosoma mansoni
+  ORGANISM  Schistosoma mansoni
+            Eukaryota; Metazoa; Platyhelminthes; Trematoda; Digenea;
+            Strigeidida; Schistosomatoidea; Schistosomatidae; Schistosoma.
+REFERENCE   1  (residues 1 to 162)
+  AUTHORS   Kelleher,A., Darwiche,R., Rezende,W.C., Farias,L.P., Leite,L.C.,
+            Schneiter,R. and Asojo,O.A.
+  TITLE     Schistosoma mansoni venom allergen-like protein 4 (SmVAL4) is a
+            novel lipid-binding SCP/TAPS protein that lacks the prototypical
+            CAP motifs
+  JOURNAL   Acta Crystallogr. D Biol. Crystallogr. 70 (PT 8), 2186-2196 (2014)
+   PUBMED   25084337
+REFERENCE   2  (residues 1 to 162)
+  AUTHORS   Asojo,O.A.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (02-MAR-2014)
+COMMENT     Structure Of Schistosoma Mansoni Venom Allergen-like Protein 4
+            (smval4).
+FEATURES             Location/Qualifiers
+     source          1..162
+                     /organism="Schistosoma mansoni"
+                     /db_xref="taxon:6183"
+     SecStr          6..24
+                     /sec_str_type="helix"
+                     /note="helix 1"
+     Bond            bond(25,158)
+                     /bond_type="disulfide"
+     SecStr          39..42
+                     /sec_str_type="sheet"
+                     /note="strand 1"
+     SecStr          43..53
+                     /sec_str_type="helix"
+                     /note="helix 2"
+     Bond            bond(56,130)
+                     /bond_type="disulfide"
+     SecStr          74..82
+                     /sec_str_type="sheet"
+                     /note="strand 2"
+     SecStr          84..92
+                     /sec_str_type="helix"
+                     /note="helix 3"
+     SecStr          97..100
+                     /sec_str_type="sheet"
+                     /note="strand 3"
+     SecStr          103..106
+                     /sec_str_type="sheet"
+                     /note="strand 4"
+     Bond            bond(105,109)
+                     /bond_type="disulfide"
+     SecStr          109..117
+                     /sec_str_type="helix"
+                     /note="helix 4"
+     Het             bond(118)
+                     /heterogen="(NAG,1000)"
+     SecStr          121..131
+                     /sec_str_type="sheet"
+                     /note="strand 5"
+     Bond            bond(125,138)
+                     /bond_type="disulfide"
+     SecStr          132..141
+                     /sec_str_type="sheet"
+                     /note="strand 6"
+ORIGIN      
+        1 efklsegqra iynfhkkvrk dvkncripgq ppaknltklk wnkllankak qqakrckyds
+       61 ndpndfiigd fesigqnlad yptiegamkd wleeyknynf eknqcngdck nykqmvwntt
+      121 eeigcgyekc gknylivcny apgdsedrpy eakpeskcnk se
+//
+
