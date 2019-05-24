@@ -8,6 +8,16 @@ This was created in partial fulfillment of the requirements for a Scripting for 
 
 To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Schistosoma mansoni_
 
+## Known dependences
+
+* BLAST+ 
+
+  - BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ (REQUIRED)
+  - MagicBlast: https://ncbi.github.io/magicblast/ (OPTIONAL)
+  - IgBlast: https://ncbi.github.io/igblast/ (OPTIONAL)
+  
+ * other programs
+
 ## Summary
 
 1. Acquire a large dataset of sequences
