@@ -10,3 +10,6 @@ python3 get_query.py > ../data/query.fasta
 python3 get_transcriptome.py
 gunzip ../data/*gz
 
+# BLAST query against transcriptomes(s)/genome(s) of interest
+bash blast.sh
+
