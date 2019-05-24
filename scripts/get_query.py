@@ -32,7 +32,7 @@ id=record["IdList"]
 handle2 = Entrez.efetch(db="protein", id=id, rettype="gb", retmode="text")
 # print(handle2.read())
 idStr = id[0]
-filename = "%s.gbk" % idStr
+filename = "../tmp/%s.gbk" % idStr
 
 if not os.path.isfile(filename):
 	net_handle = Entrez.efetch(db="protein", id=id, rettype="gb", retmode="text")
