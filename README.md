@@ -24,6 +24,26 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
   - MagicBlast: https://ncbi.github.io/magicblast/ (OPTIONAL)
   - IgBlast: https://ncbi.github.io/igblast/ (OPTIONAL)
   
+ * TransDecoder
+
+ 	- TransDecoder 5.5.0: https://github.com/TransDecoder/TransDecoder/wiki (REQUIRED)
+
+ 	Recommended to install `anaconda` if you do not already have it installed: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
+ 	```bash
+ 	conda config --add channels bioconda
+ 	conda install transdecoder=3.0.1 # trust me, this version will cause less heartache than the newest
+ 	```
+ 	```R
+ 	install.packages('ggplot2') # seems to be needed; literally no clue why
+ 	install.packages('ggseqlogo') # may not be necessary
+ 	```
+ 	- Swiss-Prot database: https://www.uniprot.org/downloads (INCLUDED)
+ 	- Pfam database current release: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (INCLUDED)
+ 	- HMMER: http://hmmer.org/ (REQUIRED)
+ 	```bash
+ 	conda instal hmmer
+ 	```
+
  * other programs
 
 ## Summary
@@ -87,7 +107,7 @@ If not, the transcriptomes were not downloaded correctly, and you should proceed
 This will run automatically.
 
 What heppened?
-1. Sequences expressed in 'Schistosoma mansoni' that are homologous to the solved structure of _Schistosoma mansoni_ were identified using BLAST+ & saved in a new `tmp/` directory as `potential_VAPs.fasta`
+1. Sequences expressed in _Schistosoma mansoni_ that are homologous to the solved structure of _Schistosoma mansoni_ were identified using BLAST+ & saved in a new `tmp/` directory as `potential_VAPs.fasta`
 2.   
 
 You will find a new directory `tmp/` which will contain many files including:
