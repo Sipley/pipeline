@@ -5,6 +5,7 @@ data/schistosoma_mansoni.PRJEA36577.WBPS13.CDS_transcripts.fa.gz
 data/*fa
 scripts/672885886.gbk
 tmp/*
+data/Pfam-A.hmm.*
 
 # exception to the rule
 
