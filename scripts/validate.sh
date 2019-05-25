@@ -11,7 +11,10 @@ hmmscan --cpu 6 --domtblout tmp/pfam_hits.domtblout data/Pfam-A.hmm tmp/potentia
 
 cd tmp
 TransDecoder.Predict -t potential_VAPs.fasta --retain_pfam_hits pfam_hits.domtblout --retain_blastp_hits VAP-sprot_hits.blastp 
-TransDecoder.Predict -t tmp/TransDecoder/longest_orfs.pep --retain_pfam_hits tmp/pfam_hits.domtblout --retain_blastp_hits tmp/VAP-sprot_hits.blastp --train data/query.fasta
+# TransDecoder.Predict -t potential_VAPs.fasta --retain_pfam_hits pfam_hits.domtblout --retain_blastp_hits VAP-sprot_hits.blastp --train ../data/query.fasta
+# mkdir no-train
+# mv potential_VAPs.fasta.transdecoder_dir.* no-train/.
+# diff potential_VAPs.fasta.transdecoder.pep no-train/potential_VAPs.fasta.transdecoder.pep 
+# NO DIFFERENCE
 
-hmmscan --cpu 6 --domtblout train/s07_redundantRemoved2_557.domtblout bait/Pfam-A.hmm \
-train/s07_redundantRemoved2_557.pep
+hmmscan --cpu 6 --domtblout tmp/VAP-validate.domtblout data/Pfam-A.hmm tmp/potential_VAPs.fasta.transdecoder.pep

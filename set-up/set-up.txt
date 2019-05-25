@@ -74,5 +74,10 @@ md5sum -c md5sum.txt
 =======
 
 # ignore the files propagated in 'data' when commit
+.gitignore
+
+# install transdecoder
+conda config --add channels bioconda
+conda install transdecoder
 
 
