@@ -30,12 +30,16 @@ cd scripts
 # 	exit 1
 # fi
 
-# BLAST query against transcriptomes(s)/genome(s) of interest
-bash blast.sh
-FILE=../tmp/potential_VAPs.fasta
-if [ -f "$FILE" ]
-then
-	echo 'BLAST+ successfully completed'
-else
-	echo 'There was an issue with BLAST+'
-fi
+# # BLAST query against transcriptomes(s)/genome(s) of interest
+# bash blast.sh
+# FILE=../tmp/potential_VAPs.fasta
+# if [ -f "$FILE" ]
+# then
+# 	echo 'BLAST+ successfully completed'
+# else
+# 	echo 'There was an issue with BLAST+'
+# fi
+
+# Translate potential VAP hits to protein
+bash transdecoder.sh
+echo 'Successfully translated VAPs'
