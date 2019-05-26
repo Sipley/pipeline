@@ -10,17 +10,17 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 ## Known dependences
 
-* Python3
+* Python3 (REQUIRED)
 
-* Python modules
+* Python modules (REQUIRED)
 
- - biopython 
- - ftplib
- - os
+	- biopython + its dependencies
+	- ftplib
+	- os
 
- - If on mac, `pip` sugguested:
+	If on mac, `pip` sugguested:
 	```bash
-	python3 -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose # req for biopython
+	python3 -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 	python3 -m pip install --user biopython
 	python3 -m pip install --user ftplib
 	python3 -m pip install --user os
@@ -28,7 +28,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 * BLAST+ 
 
-  - BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ (REQUIRED)
+	- BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ (REQUIRED)
   
     After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
     ```
@@ -37,8 +37,8 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
     ```
     Then exit terminal & re-enter or run `source ~/bash_profile`
   
-  - MagicBlast: https://ncbi.github.io/magicblast/ (OPTIONAL)
-  - IgBlast: https://ncbi.github.io/igblast/ (OPTIONAL)
+	- MagicBlast: https://ncbi.github.io/magicblast/ (OPTIONAL)
+	- IgBlast: https://ncbi.github.io/igblast/ (OPTIONAL)
   
 * TransDecoder
 
@@ -48,7 +48,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
  	Then, run:
  	```bash
  	conda config --add channels bioconda
- 	conda install transdecoder=3.0.1 # trust me, this version will cause less heartache than the most recent version
+ 	conda install transdecoder=3.0.1 # Do not use most recent version
  	```
  	- Swiss-Prot database: https://www.uniprot.org/downloads (INCLUDED)
  	- Pfam database current release: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (INCLUDED)
