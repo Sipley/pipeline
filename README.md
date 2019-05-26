@@ -17,7 +17,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 	- biopython + its dependencies
 	- ftplib (slow)
 	- os
-
+	<br>
 	If on mac and have `pip`, you can install all required Python modules with the following:
 	```bash
 	python3 -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
@@ -27,26 +27,27 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 	```
 </details>
 
-* BLAST+ 
+* <details><summary>BLAST+</summary>
 
 	- BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ 
   
-    	> After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
-    	> ```
-    	> PATH="/usr/local/ncbi/blast/bin:${PATH}"
-    	> export PATH
-    	> ```
-    	> Then exit terminal & re-enter or run `source ~/bash_profile`
+    	After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
+    	```
+    	PATH="/usr/local/ncbi/blast/bin:${PATH}"
+    	export PATH
+    	```
+    	Then exit terminal & re-enter or run `source ~/bash_profile`
   
 	- [MagicBlast](https://ncbi.github.io/magicblast/) (OPTIONAL)
 	- [IgBlast](https://ncbi.github.io/igblast/) (OPTIONAL)
+</details>
   
-* TransDecoder
+* <details><summary>TransDecoder</summary>
 
  	- [TransDecoder 5.5.0](https://github.com/TransDecoder/TransDecoder/wiki)
 
  		The easiest way to install TransDecoder and many other programs is through `anaconda` (available [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html "Download miniconda")).
-
+ 		<br>
  		With `anaconda` installed, simply run the following to install the appropriate version of TransDecoder:
 		```bash
 		conda config --add channels bioconda
@@ -60,13 +61,15 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 		```
 	- [Swiss-Prot database](https://www.uniprot.org/downloads) (INCLUDED)
 	- Pfam database: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (INCLUDED)
+</details>
 
-* `ftp` (OPTIONAL)
+* <details><summary>`ftp` (OPTIONAL)</summary>
 
 		If on mac, get `ftp` by running:
 		```bash
 		brew install inetutils
 		```
+</details>
 
 * other programs
 
@@ -91,7 +94,7 @@ cd pipeline/data
 bash pipeline.sh
 ```
 
-*Output:* two files in `data/`:
+**Output:** two files in `data/`:
 1. `query.fasta`
 
 	This contains the protein sequence for the only solved structure of a 'Venom allergen-like Protein' from flatworms, to my knowledge. 
@@ -101,10 +104,10 @@ bash pipeline.sh
 	This is the most recent transcriptome assembly for _Schistosoma mansoni_, which arguably has the most well-annotated genome of all flatworms.
 
 
-### This tutorial can be easily extended to a much larger number of transcriptomes
+### <details><summary>This tutorial can be easily extended to a much larger number of transcriptomes</summary>
 
 > NOTE: Said transcriptomes are private as many of them are currently unpublished, and the link to access them will only be provided to the instructors of this course.  However, check back after the associated manuscript is published.
-
+<br>
 Download the dataset of interest by running the following code in your terminal:
 ```bash
 mkdir transcriptomes
@@ -113,18 +116,19 @@ curl -L <LINK-TO-TRANSCRIPTOMES>?dl=1 > transcriptomes.zip
 unzip transcriptomes.zip
 rm transcriptomes.zip
 ```
-
+<br>
 To confirm that the transcriptomes were downloaded successfully, please run the following code: 
 ```bash
 md5sum -c md5sum.txt
 ```
 > NOTE: if you're on a mac and received a `command not found` error, please run `brew install md5sha1sum` and try again).
-
+<br>
 Your output should look like:
 ```bash
 transcriptomes-MS.tgz: OK
 ```
-If not, the transcriptomes were not downloaded correctly, and you should proceed with extreme caution. 
+If not, the transcriptomes were not downloaded correctly, and you should proceed with extreme caution.
+</details>
 
 ## Step 2: Pull out Gene Family of Interest from all sequences (non-redundant)
 
