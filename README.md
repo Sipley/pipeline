@@ -30,12 +30,12 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 	- BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ 
   
-    	After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
-    	```
-    	PATH="/usr/local/ncbi/blast/bin:${PATH}"
-    	export PATH
-    	```
-    	Then exit terminal & re-enter or run `source ~/bash_profile`
+    	> After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
+    	> ```
+    	> PATH="/usr/local/ncbi/blast/bin:${PATH}"
+    	> export PATH
+    	> ```
+    	> Then exit terminal & re-enter or run `source ~/bash_profile`
   
 	- [MagicBlast](https://ncbi.github.io/magicblast/) (OPTIONAL)
 	- [IgBlast](https://ncbi.github.io/igblast/) (OPTIONAL)
@@ -47,16 +47,16 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
  		The easiest way to install TransDecoder and many other programs is through `anaconda` (available [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html "Download miniconda")).
 
  		With `anaconda` installed, simply run the following to install the appropriate version of TransDecoder:
- 		```bash
- 		conda config --add channels bioconda
- 		conda install transdecoder=3.0.1 # Do not use most recent version
- 		```
+		```bash
+		conda config --add channels bioconda
+		conda install transdecoder=3.0.1 # Do not use most recent version
+		```
  	- [HMMER](http://hmmer.org/)
 
-		To install with `anaconda` on mac: 
- 		```bash
- 		conda install hmmer
- 		```
+		To install with `anaconda` on mac:
+		```bash
+		conda install hmmer
+		```
 	- [Swiss-Prot database](https://www.uniprot.org/downloads) (INCLUDED)
 	- Pfam database: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (INCLUDED)
 
@@ -93,11 +93,11 @@ bash pipeline.sh
 *Output:* two files in `data/`:
 1. `query.fasta`
 
-> This contains the protein sequence for the only solved structure of a 'Venom allergen-like Protein' from flatworms, to my knowledge. 
+	This contains the protein sequence for the only solved structure of a 'Venom allergen-like Protein' from flatworms, to my knowledge. 
 
 2. `schistosoma_mansoni.PRJEA36577.WBPS13.CDS_transcripts.fa.gz`
 
-> This is the most recent transcriptome assembly for _Schistosoma mansoni_, which arguably has the most well-annotated genome of all flatworms.
+	This is the most recent transcriptome assembly for _Schistosoma mansoni_, which arguably has the most well-annotated genome of all flatworms.
 
 
 ### This tutorial can be easily extended to a much larger number of transcriptomes
