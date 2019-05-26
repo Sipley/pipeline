@@ -10,6 +10,22 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 ## Known dependences
 
+* Python3
+
+* Python modules
+
+ - biopython 
+ - ftplib
+ - os
+
+ - If on mac, `pip` sugguested:
+	```bash
+	python3 -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose # req for biopython
+	python3 -m pip install --user biopython
+	python3 -m pip install --user ftplib
+	python3 -m pip install --user os
+	```
+
 * BLAST+ 
 
   - BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ (REQUIRED)
@@ -24,27 +40,30 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
   - MagicBlast: https://ncbi.github.io/magicblast/ (OPTIONAL)
   - IgBlast: https://ncbi.github.io/igblast/ (OPTIONAL)
   
- * TransDecoder
+* TransDecoder
 
  	- TransDecoder 5.5.0: https://github.com/TransDecoder/TransDecoder/wiki (REQUIRED)
 
  	Recommended to install `anaconda` if you do not already have it installed: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
+ 	Then, run:
  	```bash
  	conda config --add channels bioconda
- 	conda install transdecoder=3.0.1 # trust me, this version will cause less heartache than the newest
- 	```
- 	```R
- 	install.packages('ggplot2') # seems to be needed; literally no clue why
- 	install.packages('ggseqlogo') # may not be necessary
+ 	conda install transdecoder=3.0.1 # trust me, this version will cause less heartache than the most recent version
  	```
  	- Swiss-Prot database: https://www.uniprot.org/downloads (INCLUDED)
  	- Pfam database current release: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (INCLUDED)
  	- HMMER: http://hmmer.org/ (REQUIRED)
  	```bash
- 	conda instal hmmer
+ 	conda install hmmer
  	```
 
- * other programs
+* `ftp` (OPTIONAL)
+	If on mac, get `ftp` by:
+	```bash
+	brew install inetutils
+	```
+
+* other programs
 
 ## Summary
 

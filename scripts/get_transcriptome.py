@@ -7,7 +7,6 @@ import wormbase_parasite
 import requests
 import urllib
 import os
-from ftplib import FTP
 
 api = wormbase_parasite.WormbaseClient()
 species=''
