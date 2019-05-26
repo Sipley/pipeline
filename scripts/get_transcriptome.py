@@ -1,7 +1,7 @@
 from methods import getWormParaSiteData
 
 species='Schistosoma mansoni'
-path='../data'
+path='../data/'
 
 getWormParaSiteData(species, path)
 
