@@ -7,6 +7,10 @@ import wormbase_parasite
 import requests
 import urllib
 import os
+<<<<<<< HEAD
+=======
+from ftplib import FTP
+>>>>>>> refs/remotes/origin/master
 
 api = wormbase_parasite.WormbaseClient()
 species=''

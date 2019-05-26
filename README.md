@@ -126,7 +126,11 @@ If not, the transcriptomes were not downloaded correctly, and you should proceed
 This will run automatically.
 
 What heppened?
+<<<<<<< HEAD
 1. Sequences expressed in _Schistosoma mansoni_ that are homologous to the solved structure of _Schistosoma mansoni_ were identified using BLAST+ & saved in a new `tmp/` directory as `potential_VAPs.fasta`
+=======
+1. Sequences expressed in 'Schistosoma mansoni' that are homologous to the solved structure of _Schistosoma mansoni_ were identified using BLAST+ & saved in a new `tmp/` directory as `potential_VAPs.fasta`
+>>>>>>> refs/remotes/origin/master
 2.   
 
 You will find a new directory `tmp/` which will contain many files including:

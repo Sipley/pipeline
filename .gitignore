@@ -1,3 +1,11 @@
 # exclude everything
 
 # exception to the rule
+=======
+data/query.fasta
+data/schistosoma_mansoni.PRJEA36577.WBPS13.CDS_transcripts.fa.gz
+tmp/*
+
+# exception to the rule
+
+!data/.gitkeep
