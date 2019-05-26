@@ -1,5 +1,3 @@
-# transcriptome to gene tree tutorial
-
 from methods import getQuery
 
 email='Breanna.Sipley@gmail.com'
