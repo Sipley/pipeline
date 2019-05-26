@@ -11,7 +11,6 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 ## Known dependences
 
 <details><summary>Python3 + modules</summary><br>
-
 * `biopython` + its dependencies
 * `ftplib` (slow)
 * `os`
@@ -27,8 +26,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 </details>
 
-<details><summary>BLAST+</summary>
-
+<details><summary>BLAST+</summary><br>
 #### BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ 
 
 	After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
@@ -46,8 +44,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 </details>
  
-<details><summary>TransDecoder</summary>
-
+<details><summary>TransDecoder</summary><br>
 #### [TransDecoder 5.5.0](https://github.com/TransDecoder/TransDecoder/wiki)
 
 	The easiest way to install TransDecoder and many other programs is through `anaconda` (available [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html "Download miniconda")).
@@ -73,7 +70,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 </details>
 
-<details><summary>other programs</summary><br>	
+<details><summary>Other programs</summary><br>	
 * `ftp` (OPTIONAL)
 
 	If on mac, get `ftp` by running:
@@ -106,21 +103,19 @@ cd pipeline/data
 bash pipeline.sh
 ```
 
-### Output: two files in `data/`
-1. `query.fasta`
+### Output
+1. `data/query.fasta`
 
 		This contains the protein sequence for the only solved structure of a 'Venom allergen-like Protein' from flatworms, to my knowledge. 
 
-2. `schistosoma_mansoni.PRJEA36577.WBPS13.CDS_transcripts.fa.gz`
+2. `data/schistosoma_mansoni.PRJEA36577.WBPS13.CDS_transcripts.fa.gz`
 
 		This is the most recent transcriptome assembly for _Schistosoma mansoni_, which arguably has the most well-annotated genome of all flatworms.
 
 
 <details><summary>This tutorial can be easily extended to a much larger number of transcriptomes</summary>
 
-	> NOTE: Said transcriptomes are private as many of them are currently unpublished, and the link to access them will only be provided to the instructors of this course.  However, check back after the associated manuscript is published.
-
-	Download the dataset of interest by running the following code in your terminal:
+	If you have the needed link, you can download a dataset containing 47 flatworms transcriptomes by running the following code in your terminal:
 
 	```bash
 	mkdir transcriptomes
