@@ -81,7 +81,18 @@ brew install inetutils
 
 <details><summary>Other programs</summary>
 
-* A program
+* "Normal" `sed`
+
+If on mac, download by running:
+```bash
+brew install gnu-sed
+```
+
+Don't forget to add to path:
+```bash
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+```
+
 * Maybe another
 * Perhaps one more
 

@@ -2,3 +2,5 @@ Figure out how to generalize pipeline with a smaller dataset?
 Consider dependencies 
 Local machine?
 
+ADD test for sed -i (y = 2x)
+Generalize shell scripts
