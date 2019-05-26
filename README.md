@@ -22,6 +22,8 @@ python3 -m pip install --user numpy scipy matplotlib ipython jupyter pandas symp
 python3 -m pip install --user biopython
 python3 -m pip install --user ftplib
 python3 -m pip install --user os
+python3 -m pip install --user wormbase-parasite
+python3 -m pip install --user requests
 ```
 
 </details>
