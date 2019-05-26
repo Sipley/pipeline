@@ -32,7 +32,11 @@ id=record["IdList"]
 handle2 = Entrez.efetch(db="protein", id=id, rettype="gb", retmode="text")
 # print(handle2.read())
 idStr = id[0]
+<<<<<<< HEAD
 filename = "../tmp/%s.gbk" % idStr
+=======
+filename = "%s.gbk" % idStr
+>>>>>>> 53d67b6... Adding script to pull VAP sequence from NCBI & printing fasta to data/
 
 if not os.path.isfile(filename):
 	net_handle = Entrez.efetch(db="protein", id=id, rettype="gb", retmode="text")
