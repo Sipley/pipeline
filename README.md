@@ -63,13 +63,12 @@ To install with `anaconda` on mac:
 conda install hmmer
 ```
 
-#### Included
-* [Swiss-Prot database](https://www.uniprot.org/downloads)
-* Pfam database: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release
+#### [Swiss-Prot database](https://www.uniprot.org/downloads) (Included)
+#### Pfam database: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (Included)
 
 </details>
 
-<details><summary>FTP (Optional)</summary>
+<details><summary>FTP (Optional)</summary><br>
 
 If on mac, get `ftp` by running:
 ```bash
@@ -97,8 +96,6 @@ brew install inetutils
 ## Step 1: Acquire a large dataset of sequences
 
 ### For this tutorial, we will use the publicly available transcriptome of _Schistosoma mansoni_
-
-We're actually going to use the pipeline itself to generate our datasets.
 
 Please *fork* this repository and clone the directory from your GitHub to your local machine. Then cd into the `scripts` directory and run `pipeline.sh` (ignore the warning message):
 ```bash
