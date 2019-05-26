@@ -38,8 +38,16 @@ cd scripts
 # 	echo 'BLAST+ successfully completed'
 # else
 # 	echo 'There was an issue with BLAST+'
+#	exit 1
 # fi
 
 # Translate potential VAP hits to protein
-bash transdecoder.sh
-echo 'Successfully translated VAPs'
+# bash transdecoder.sh
+FILE=../tmp/potential_VAPs.fasta.transdecoder.pep 
+if [ -f "$FILE" ]
+then
+	echo 'Successfully translated VAPs'
+else
+	echo 'There was an issue with TransDecoder'
+	exit 1
+fi
