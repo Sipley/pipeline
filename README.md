@@ -18,7 +18,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 If on mac and have `pip`, you can install all required Python modules with the following:
 ```bash
-]python3 -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+python3 -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 python3 -m pip install --user biopython
 python3 -m pip install --user ftplib
 python3 -m pip install --user os
@@ -69,14 +69,20 @@ conda install hmmer
 
 </details>
 
-<details><summary>Other programs</summary>
-
-* `ftp` (OPTIONAL)
+<details><summary>FTP (Optional)</summary>
 
 If on mac, get `ftp` by running:
 ```bash
 brew install inetutils
 ```
+
+</details>
+
+<details><summary>Other programs</summary>
+
+* A program
+* Maybe another
+* Perhaps one more
 
 </details>
 
@@ -111,7 +117,7 @@ bash pipeline.sh
 	This is the most recent transcriptome assembly for _Schistosoma mansoni_, which arguably has the most well-annotated genome of all flatworms.
 
 
-<details><summary>This tutorial can be easily extended to a much larger number of transcriptomes</summary>
+<details><summary>This tutorial can be easily extended to a much larger number of transcriptomes</summary><br>
 
 If you have the needed link, you can download a dataset containing 47 flatworms transcriptomes by running the following code in your terminal:
 ```bash
