@@ -12,7 +12,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 * Python3
 
-* Several Python modules
+* <details><summary>Python modules</summary>
 
 	- biopython + its dependencies
 	- ftplib (slow)
@@ -25,6 +25,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 	python3 -m pip install --user ftplib
 	python3 -m pip install --user os
 	```
+</details>
 
 * BLAST+ 
 
