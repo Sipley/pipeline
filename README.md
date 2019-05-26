@@ -15,7 +15,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 * Several Python modules
 
 	- biopython + its dependencies
-	- ftplib
+	- ftplib (slow)
 	- os
 
 	If on mac and have `pip`, you can install all required Python modules with the following:
@@ -28,7 +28,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 * BLAST+ 
 
-	- [BLAST+ 2.9.0 executables](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ "Download BLAST+")
+	- BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ 
   
     After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
     ```
@@ -57,7 +57,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
  	conda install hmmer
  	```
 	- [Swiss-Prot database](https://www.uniprot.org/downloads) (INCLUDED)
-	- [Pfam database](ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release) (INCLUDED)
+	- Pfam database: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (INCLUDED)
 
 * `ftp` (OPTIONAL)
 	If on mac, get `ftp` by running:
