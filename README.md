@@ -18,7 +18,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 	- ftplib
 	- os
 
-	If on mac, `pip` sugguested:
+	If on mac and have `pip`, you can install all required Python modules with the following:
 	```bash
 	python3 -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 	python3 -m pip install --user biopython
@@ -28,7 +28,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 * BLAST+ 
 
-	- BLAST+ 2.9.0 executables: <ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/>
+	- [BLAST+ 2.9.0 executables](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ "Download BLAST+")
   
     After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
     ```
@@ -37,28 +37,30 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
     ```
     Then exit terminal & re-enter or run `source ~/bash_profile`
   
-	- MagicBlast: https://ncbi.github.io/magicblast/ (OPTIONAL)
-	- IgBlast: https://ncbi.github.io/igblast/ (OPTIONAL)
+	- [MagicBlast](https://ncbi.github.io/magicblast/) (OPTIONAL)
+	- [IgBlast](https://ncbi.github.io/igblast/) (OPTIONAL)
   
 * TransDecoder
 
- 	- TransDecoder 5.5.0: https://github.com/TransDecoder/TransDecoder/wiki 
+ 	- [TransDecoder 5.5.0](https://github.com/TransDecoder/TransDecoder/wiki)
 
- 	Recommended to install `anaconda` if you do not already have it installed: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
- 	Then, run:
+ 	The easiest way to install TransDecoder and many other programs is through `anaconda` (available [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html "Download miniconda")).
+
+ 	With `anaconda` installed, simply run the following to install the appropriate version of TransDecoder:
  	```bash
  	conda config --add channels bioconda
  	conda install transdecoder=3.0.1 # Do not use most recent version
  	```
- 	- Swiss-Prot database: https://www.uniprot.org/downloads (INCLUDED)
- 	- Pfam database current release: <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release> (INCLUDED)
- 	- HMMER: http://hmmer.org/ 
+ 	- [HMMER](http://hmmer.org/)
+	To install: 
  	```bash
  	conda install hmmer
  	```
+	- [Swiss-Prot database](https://www.uniprot.org/downloads) (INCLUDED)
+	- [Pfam database](ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release) (INCLUDED)
 
 * `ftp` (OPTIONAL)
-	If on mac, get `ftp` by:
+	If on mac, get `ftp` by running:
 	```bash
 	brew install inetutils
 	```
