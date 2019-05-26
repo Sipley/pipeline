@@ -1,7 +1,3 @@
 # exclude everything
-data/*
-tmp/*
 
 # exception to the rule
-
-!data/.gitkeep
