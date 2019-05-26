@@ -10,68 +10,78 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 ## Known dependences
 
-<details><summary>`Python3` + modules</summary>
-<br>
+<details><summary>Python3 + modules</summary><br>
+
 * `biopython` + its dependencies
 * `ftplib` (slow)
 * `os`
-<br>
+
 If on mac and have `pip`, you can install all required Python modules with the following:
-<br>
+
 ```bash
 python3 -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 python3 -m pip install --user biopython
 python3 -m pip install --user ftplib
 python3 -m pip install --user os
 ```
+
 </details>
-<br>
-<details><summary>BLAST+</summary>
-<br>
+
+<details><summary>BLAST+</summary><br>
+
 * BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ 
-<br>  
+
 After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
-<br>
+
 ```bash
 PATH="/usr/local/ncbi/blast/bin:${PATH}"
 export PATH
 ```
+
 Then exit terminal & re-enter or run `source ~/bash_profile`
-<br>
+
 * [MagicBlast](https://ncbi.github.io/magicblast/) (OPTIONAL)
 * [IgBlast](https://ncbi.github.io/igblast/) (OPTIONAL)
+
 </details>
-<br>  
-<details><summary>TransDecoder</summary>
-<br>
+ 
+<details><summary>TransDecoder</summary><br>
+
 * [TransDecoder 5.5.0](https://github.com/TransDecoder/TransDecoder/wiki)
-<br>
+
 The easiest way to install TransDecoder and many other programs is through `anaconda` (available [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html "Download miniconda")).
-<br>
+
 With `anaconda` installed, simply run the following to install the appropriate version of TransDecoder:
+
 ```bash
 conda config --add channels bioconda
 conda install transdecoder=3.0.1 # Do not use most recent version
 ```
+
 * [HMMER](http://hmmer.org/)
-<br>
+
 To install with `anaconda` on mac:
+
 ```bash
 conda install hmmer
 ```
+
 * [Swiss-Prot database](https://www.uniprot.org/downloads) (INCLUDED)
 * Pfam database: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (INCLUDED)
+
 </details>
-<br>
-<details><summary>`ftp` (OPTIONAL)</summary>
-<br>
+
+<details><summary>`ftp` (OPTIONAL)</summary><br>
+
 If on mac, get `ftp` by running:
+
 ```bash
 brew install inetutils
 ```
+
 </details>
-<br>
-<details><summary>other programs</summary>
+
+<details><summary>other programs</summary><br>
 </details>
 
 ## Summary
@@ -89,6 +99,7 @@ brew install inetutils
 We're actually going to use the pipeline itself to generate our datasets.
 
 Please *fork* this repository and clone the directory from your GitHub to your local machine. Then cd into the `scripts` directory and run `pipeline.sh` (ignore the warning message):
+
 ```bash
 git clone https://github.com/<YOUR GITHUB USERNAME>/pipeline.git
 cd pipeline/data
@@ -108,8 +119,9 @@ bash pipeline.sh
 ### <details><summary>This tutorial can be easily extended to a much larger number of transcriptomes</summary>
 
 > NOTE: Said transcriptomes are private as many of them are currently unpublished, and the link to access them will only be provided to the instructors of this course.  However, check back after the associated manuscript is published.
-<br>
+
 Download the dataset of interest by running the following code in your terminal:
+
 ```bash
 mkdir transcriptomes
 cd transcriptomes
@@ -117,31 +129,38 @@ curl -L <LINK-TO-TRANSCRIPTOMES>?dl=1 > transcriptomes.zip
 unzip transcriptomes.zip
 rm transcriptomes.zip
 ```
-<br>
+
 To confirm that the transcriptomes were downloaded successfully, please run the following code: 
+
 ```bash
 md5sum -c md5sum.txt
 ```
+
 > NOTE: if you're on a mac and received a `command not found` error, please run `brew install md5sha1sum` and try again).
-<br>
+
 Your output should look like:
 ```bash
 transcriptomes-MS.tgz: OK
 ```
+
 If not, the transcriptomes were not downloaded correctly, and you should proceed with extreme caution.
+
 </details>
 
 ## Step 2: Pull out Gene Family of Interest from all sequences (non-redundant)
 
 This will run automatically.
 
-What heppened?
+### What heppened?
+
 1. Sequences expressed in _Schistosoma mansoni_ that are homologous to the solved structure of _Schistosoma mansoni_ were identified using BLAST+ & saved in a new `tmp/` directory as `potential_VAPs.fasta`
 2.   
 
 You will find a new directory `tmp/` which will contain many files including:
+
 ```bash
 672885886.gbk		blast.db.nog		blast.db.nsq		contigLure.txt
 blast.db.nhr		blast.db.nsd		blast.tblastn		potential_VAPs.fasta
 blast.db.nin		blast.db.nsi		blast_hits.fasta
 ```
+
