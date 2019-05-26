@@ -1,6 +1,6 @@
 # transcriptome to gene tree tutorial
 
-from getFTP import getQuery
+from methods import getQuery
 
 email='Breanna.Sipley@gmail.com'
 db='protein'

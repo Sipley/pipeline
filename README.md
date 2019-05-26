@@ -10,9 +10,9 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 ## Known dependences
 
-* Python3 (REQUIRED)
+* Python3
 
-* Python modules (REQUIRED)
+* Several Python modules
 
 	- biopython + its dependencies
 	- ftplib
@@ -28,7 +28,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
 
 * BLAST+ 
 
-	- BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ (REQUIRED)
+	- BLAST+ 2.9.0 executables: <ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/>
   
     After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
     ```
@@ -42,7 +42,7 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
   
 * TransDecoder
 
- 	- TransDecoder 5.5.0: https://github.com/TransDecoder/TransDecoder/wiki (REQUIRED)
+ 	- TransDecoder 5.5.0: https://github.com/TransDecoder/TransDecoder/wiki 
 
  	Recommended to install `anaconda` if you do not already have it installed: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
  	Then, run:
@@ -51,8 +51,8 @@ To survey the diversity of Venom Allergen-like Proteins (VAPs) expressed in _Sch
  	conda install transdecoder=3.0.1 # Do not use most recent version
  	```
  	- Swiss-Prot database: https://www.uniprot.org/downloads (INCLUDED)
- 	- Pfam database current release: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (INCLUDED)
- 	- HMMER: http://hmmer.org/ (REQUIRED)
+ 	- Pfam database current release: <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release> (INCLUDED)
+ 	- HMMER: http://hmmer.org/ 
  	```bash
  	conda install hmmer
  	```
