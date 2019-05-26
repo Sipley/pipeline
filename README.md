@@ -29,7 +29,7 @@ python3 -m pip install --user os
 
 <details><summary>BLAST+</summary><br>
 
-### BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ 
+#### BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ 
 
 After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
 
@@ -40,7 +40,7 @@ export PATH
 
 Then exit terminal & re-enter or run `source ~/bash_profile`
 
-### Optional:
+#### Optional:
 * [MagicBlast](https://ncbi.github.io/magicblast/)
 * [IgBlast](https://ncbi.github.io/igblast/)
 
@@ -48,7 +48,7 @@ Then exit terminal & re-enter or run `source ~/bash_profile`
  
 <details><summary>TransDecoder</summary><br>
 
-### [TransDecoder 5.5.0](https://github.com/TransDecoder/TransDecoder/wiki)
+#### [TransDecoder 5.5.0](https://github.com/TransDecoder/TransDecoder/wiki)
 
 The easiest way to install TransDecoder and many other programs is through `anaconda` (available [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html "Download miniconda")).
 
@@ -59,7 +59,7 @@ conda config --add channels bioconda
 conda install transdecoder=3.0.1 # Do not use most recent version
 ```
 
-### [HMMER](http://hmmer.org/)
+#### [HMMER](http://hmmer.org/)
 
 To install with `anaconda` on mac:
 
@@ -67,7 +67,7 @@ To install with `anaconda` on mac:
 conda install hmmer
 ```
 
-### Included:
+#### Included:
 * [Swiss-Prot database](https://www.uniprot.org/downloads) (INCLUDED)
 * Pfam database: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (INCLUDED)
 
@@ -118,35 +118,35 @@ bash pipeline.sh
 	This is the most recent transcriptome assembly for _Schistosoma mansoni_, which arguably has the most well-annotated genome of all flatworms.
 
 
-<details><summary>**This tutorial can be easily extended to a much larger number of transcriptomes**</summary>
-
+<details><summary>This tutorial can be easily extended to a much larger number of transcriptomes</summary>
+<br>
 > NOTE: Said transcriptomes are private as many of them are currently unpublished, and the link to access them will only be provided to the instructors of this course.  However, check back after the associated manuscript is published.
-
-Download the dataset of interest by running the following code in your terminal:
-
-```bash
-mkdir transcriptomes
-cd transcriptomes
-curl -L <LINK-TO-TRANSCRIPTOMES>?dl=1 > transcriptomes.zip
-unzip transcriptomes.zip
-rm transcriptomes.zip
-```
-
-To confirm that the transcriptomes were downloaded successfully, please run the following code: 
-
-```bash
-md5sum -c md5sum.txt
-```
-
-> NOTE: if you're on a mac and received a `command not found` error, please run `brew install md5sha1sum` and try again).
-
-Your output should look like:
-```bash
-transcriptomes-MS.tgz: OK
-```
-
-If not, the transcriptomes were not downloaded correctly, and you should proceed with extreme caution.
-
+> 
+> Download the dataset of interest by running the following code in your terminal:
+> 
+> ```bash
+> mkdir transcriptomes
+> cd transcriptomes
+> curl -L <LINK-TO-TRANSCRIPTOMES>?dl=1 > transcriptomes.zip
+> unzip transcriptomes.zip
+> rm transcriptomes.zip
+> ```
+> 
+> To confirm that the transcriptomes were downloaded successfully, please run the following code: 
+> 
+> ```bash
+> md5sum -c md5sum.txt
+> ```
+> 
+> #### NOTE: if you're on a mac and received a `command not found` error, please run `brew install md5sha1sum` and try again).
+> 
+> Your output should look like:
+> ```bash
+> transcriptomes-MS.tgz: OK
+> ```
+> 
+> If not, the transcriptomes were not downloaded correctly, and you should proceed with extreme caution.
+> 
 </details>
 
 ## Step 2: Pull out Gene Family of Interest from all sequences (non-redundant)
