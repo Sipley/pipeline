@@ -29,7 +29,7 @@ python3 -m pip install --user os
 
 <details><summary>BLAST+</summary><br>
 
-* BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ 
+### BLAST+ 2.9.0 executables: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ 
 
 After installing, add the BLAST+ executables to your path by inserting the following into your `~/.bash_profile`:
 
@@ -40,14 +40,15 @@ export PATH
 
 Then exit terminal & re-enter or run `source ~/bash_profile`
 
-* [MagicBlast](https://ncbi.github.io/magicblast/) (OPTIONAL)
-* [IgBlast](https://ncbi.github.io/igblast/) (OPTIONAL)
+### Optional:
+* [MagicBlast](https://ncbi.github.io/magicblast/)
+* [IgBlast](https://ncbi.github.io/igblast/)
 
 </details>
  
 <details><summary>TransDecoder</summary><br>
 
-* [TransDecoder 5.5.0](https://github.com/TransDecoder/TransDecoder/wiki)
+### [TransDecoder 5.5.0](https://github.com/TransDecoder/TransDecoder/wiki)
 
 The easiest way to install TransDecoder and many other programs is through `anaconda` (available [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html "Download miniconda")).
 
@@ -58,7 +59,7 @@ conda config --add channels bioconda
 conda install transdecoder=3.0.1 # Do not use most recent version
 ```
 
-* [HMMER](http://hmmer.org/)
+### [HMMER](http://hmmer.org/)
 
 To install with `anaconda` on mac:
 
@@ -66,6 +67,7 @@ To install with `anaconda` on mac:
 conda install hmmer
 ```
 
+### Included:
 * [Swiss-Prot database](https://www.uniprot.org/downloads) (INCLUDED)
 * Pfam database: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (INCLUDED)
 
@@ -116,7 +118,7 @@ bash pipeline.sh
 	This is the most recent transcriptome assembly for _Schistosoma mansoni_, which arguably has the most well-annotated genome of all flatworms.
 
 
-### <details><summary>This tutorial can be easily extended to a much larger number of transcriptomes</summary>
+<details><summary>**This tutorial can be easily extended to a much larger number of transcriptomes**</summary>
 
 > NOTE: Said transcriptomes are private as many of them are currently unpublished, and the link to access them will only be provided to the instructors of this course.  However, check back after the associated manuscript is published.
 
