@@ -79,6 +79,15 @@ conda install -c bioconda mafft
 
 </details>
 
+<details><summary>RAxML</summary>
+
+If on mac, get `RAxML` by running:
+```bash
+conda install -c bioconda raxml
+```
+
+</details>
+
 <details><summary>FTP (Optional)</summary><br>
 
 If on mac, get `ftp` by running:

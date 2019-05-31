@@ -2,7 +2,7 @@
 # Enter 'scripts' directory
 # mkdir tmp
 # mkdir data
-cd scripts
+# cd scripts
 
 # # Download required databases
 # python3 get_databases.py
@@ -52,5 +52,14 @@ cd scripts
 # 	exit 1
 # fi
 
-# Validate VAPs
-bash validate.sh
+# # Validate VAPs
+# bash validate.sh
+
+# Align VAPs
+# unique
+cd tmp
+cd-hit -i transdecoder_VAPs.pep -o transdecoder_VAPs_unique.pep -c 1
+mafft  --auto --reorder "transdecoder_VAPs_unique.pep" > "mafft_S-mansoni_VAP.fasta"
+sed 's/.* />/' mafft_S-mansoni_VAP.fasta | sed 's/(.)//' > mafft_S-mansoni_VAP_clean-names.fasta
+# Build RAxML tree
+
