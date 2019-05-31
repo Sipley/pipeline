@@ -46,9 +46,9 @@ Then exit terminal & re-enter or run `source ~/bash_profile`
 
 </details>
  
-<details><summary>TransDecoder</summary>
+<details><summary>TransDecoder + dependencies</summary>
 
-#### [TransDecoder 5.5.0](https://github.com/TransDecoder/TransDecoder/wiki) + dependencies
+#### [TransDecoder 5.5.0](https://github.com/TransDecoder/TransDecoder/wiki)
 
 The easiest way to install TransDecoder and many other programs is through `anaconda` (available [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html "Download miniconda")).
 
