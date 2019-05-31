@@ -19,7 +19,7 @@ then
 	exit 1
 else
 	echo "No problems here! All VAPs successfully validated."
-wc -l *names.txt
+fi
 
 
 exit 0
