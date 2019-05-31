@@ -13,7 +13,7 @@ sed -i '/^$/d' transdecoder-complete_VAPs.pep
 grep "CAP" pfam-validate_VAPs.domtblout | grep "Cysteine-rich secretory protein family" | awk '{print $4}' | sort | uniq > pfam-CRISP_names.txt 
 sed 's/\ .*//' transdecoder-complete_VAPs.pep | grep ">" | sed 's/>//' | sort | uniq > transdecoder-VAP_names.txt 
 diff transdecoder-VAP_names.txt pfam-CRISP_names.txt > problematic-VAPs.txt
-if [ -s /tmp/problematic-VAPs.txt ]
+if [ -s problematic-VAPs.txt ]
 then
 	echo "Looks like some VAPs may need a closer look. Please check 'problematic-VAPs.txt' and remove un-validated VAPs from 'transdecoder-comlete_VAPs.pep' before continuing."
 	exit 1
