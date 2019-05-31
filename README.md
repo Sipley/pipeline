@@ -159,7 +159,7 @@ This will run automatically.
 ### What heppened?
 
 1. Sequences expressed in _Schistosoma mansoni_ that are homologous to the solved structure of _Schistosoma mansoni_ were identified using BLAST+ & saved in a new `tmp/` directory as `potential_VAPs.fasta`
-2.   
+2. Potential VAP sequences were translated to protein and validated as VAPs via CAP && CRISP domain presence
 
 You will find a new directory `tmp/` which will contain many files including:
 
