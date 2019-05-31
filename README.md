@@ -161,11 +161,26 @@ This will run automatically.
 1. Sequences expressed in _Schistosoma mansoni_ that are homologous to the solved structure of _Schistosoma mansoni_ were identified using BLAST+ & saved in a new `tmp/` directory as `potential_VAPs.fasta`
 2. Potential VAP sequences were translated to protein and validated as VAPs via CAP && CRISP domain presence
 
+## Step 3: Infer the best gene tree for your gene family of interest
+
+This will run automatically.
+
+### What happened?
+
+1. The VAP protein sequences were aligned using the program 'mafft'
+2. 
+
 You will find a new directory `tmp/` which will contain many files including:
 
 ```bash
-672885886.gbk		blast.db.nog		blast.db.nsq		contigLure.txt
-blast.db.nhr		blast.db.nsd		blast.tblastn		potential_VAPs.fasta
-blast.db.nin		blast.db.nsi		blast_hits.fasta
+blast.db.nsd	pfam-hits_VAPs.domtblout	snp-sites.out.phylip					sprot.db.psq
+Pfam-A.hmm		blast.db.nsi				pfam-validate_VAPs.domtblout			snp-sites.out.snp_sites.aln		transdecoder-VAP_names.txt
+Pfam-A.hmm.h3f	blast.db.nsq				potential_VAPs.fasta					snp-sites.out.vcf				transdecoder-complete_VAPs.pep
+Pfam-A.hmm.h3i	blast.tblastn				potential_VAPs.fasta.transdecoder.bed	sprot-hits_VAPs.blastp			transdecoder-names.txt
+Pfam-A.hmm.h3m	blast_hits.fasta			potential_VAPs.fasta.transdecoder.cds	sprot.db.phr					transdecoder_VAPs.pep
+Pfam-A.hmm.h3p	contigLure.txt				potential_VAPs.fasta.transdecoder.gff3	sprot.db.pin					uniprot_sprot.fasta
+blast.db.nhr	mafft_S-mansoni_VAP.fasta	potential_VAPs.fasta.transdecoder.pep	sprot.db.pog
+blast.db.nin	mafft_S-mansoni_VAP.out		potential_VAPs.fasta.transdecoder_dir	sprot.db.psd
+blast.db.nog	pfam-CRISP_names.txt		problematic-VAPs.txt					sprot.db.psi
 ```
 
