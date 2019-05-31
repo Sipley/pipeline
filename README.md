@@ -70,6 +70,15 @@ conda install hmmer
 
 </details>
 
+<details><summary>mafft</summary><br>
+
+If on mac, get 'mafft' by running:
+```bash
+conda install -c bioconda mafft 
+```
+
+</details>
+
 <details><summary>FTP (Optional)</summary><br>
 
 If on mac, get `ftp` by running:
