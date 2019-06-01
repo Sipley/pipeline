@@ -86,6 +86,12 @@ If on mac, get `RAxML` by running:
 conda install -c bioconda raxml
 ```
 
+Don't forget to add to your `~/.bash_profile`:
+```bash
+PATH="/Users/breanna/miniconda3/bin:$PATH"
+export PATH
+```
+
 </details>
 
 <details><summary>FTP (Optional)</summary><br>
