@@ -60,6 +60,6 @@
 # cd tmp
 # cd-hit -i transdecoder_VAPs.pep -o transdecoder_VAPs_unique.pep -c 1
 # mafft  --auto --reorder "transdecoder_VAPs_unique.pep" > "mafft_S-mansoni_VAP.fasta"
-sed 's/.* />/' mafft_S-mansoni_VAP.fasta | sed 's/(.)//' | sed 's/:.*//' > mafft_S-mansoni_VAP_clean-names.fasta
+sed 's/.* />/' tmp/mafft_S-mansoni_VAP.fasta | sed 's/(.)//' | sed 's/:.*//' > tmp/mafft_S-mansoni_VAP_clean-names.fasta
 # Build RAxML tree
 
