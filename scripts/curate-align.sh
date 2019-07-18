@@ -13,18 +13,17 @@ fi
 mafft --auto --reorder transdecoder_VAPs_unique.pep > mafft_S-mansoni_VAP.fasta
 if [ -s mafft_S-mansoni_VAP.fasta ]
 then
-	echo "Sequences successfully aligned"
+	echo "Sequences successfully aligned. Read to build tree..."
 else
 	echo "Something is wrong with mafft"
 fi
 
-# Make headers pretty
 sed 's/.* />/' mafft_S-mansoni_VAP.fasta | sed 's/(.)//' | sed 's/:.*//' > mafft_S-mansoni_VAP_clean-names.fasta
 if [ -s mafft_S-mansoni_VAP_clean-names.fasta ]
 then
-	echo "Names all tidied up, ready to build tree"
+        echo "Names all tidied up for tree building..."
 else
-	echo "You may want to double check your headers"
+        echo "You may want to double check your headers"
 fi
 
 exit 0

@@ -96,11 +96,41 @@ export PATH
 
 <details><summary>CD-HIT</summary><br>
 
-This should work:
+If on mac, this should work:
 ```bash
 conda install -c bioconda cd-hit 
 ```
 
+</details>
+
+<details><summary>[SignalP version 5.0]{http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?signalp}</summary><br>
+
+You'll have to install this yourself by requesting an academic download.  Be sure you install the correct version for your system (if not mac `Darwin`).  Please follow instructions carefully and make sure the exectuables are in your PATH; it's important that the file structure of the original download is conserved for `SignalP` to find the correct executables. It is strongly advised that you decompress the tarball for this download in your `/usr/local/bin`
+
+If you downloaded the package to `/usr/local/bin` as sugguested, this should work on Mac to add the executables to your path:
+```bash
+cp ~/Downloads/signalp-4.1g.Darwin.tar.gz /usr/local/bin/.
+cd /usr/local/bin
+tar -xvzf ~/Downloads/signalp-4.1g.Darwin.tar.gz
+```
+
+Add this new directory to your path in `~/.bash_profile`
+```bash
+# Adding SignalP
+PATH="/usr/local/bin/signalp-4.1:${PATH}"
+export PATH
+```
+
+YOU MUST READ THE *.readme FILE & change settings in 'signalp' appropriately. Pay special attention to `my $outputDir`---this MUST be writable by ALL users.  Recommended settings:
+```bash
+# full path to the signalp-4.1 directory on your system (mandatory)
+BEGIN {
+    $ENV{SIGNALP} = '/usr/local/bin/signalp-4.1';
+}
+
+# determine where to store temporary files (must be writable to all users)
+my $outputDir = "/var/tmp";
+```
 </details>
 
 <details><summary>FTP (Optional)</summary><br>
@@ -206,24 +236,31 @@ This will run automatically.
 3. Header names were cleaned up
 4. RAxML was employed
 
-	a. Automatically selects best-fitting model of aa substitution (WAG)
-	b. Maximum likelihood trees inferred from 100 bootstrapped alignments (rapid)
+	b. Maximum likelihood trees inferred from 10 bootstrapped alignments (rapid) under WAG model of protein evolution
 	c. ML search for best tree (Fast ML -> Slow ML -> Thorough ML)
 	d. Draw Bootstrap Support Valus on best-scoring ML tree
 
-Notes:
-* Alignments has 309 distinct alignment patterns
-* Proportion of gaps & completely undetermined characters: 60.48%
-* 100 Rapid Bootstraps: 367 seconds
-* Average time per Rapid Bootstrap: 3.67 seconds
-* Fast ML optimization time: 331.61 seconds
-* Slow ML search time: 133.83 seconds
-* Thorough ML search time: 39.49 seconds
-* ML search took 504.95 seconds
-* Combined Bootstrap & ML search: 872.30 seconds (0.24 hr)
-* Overall execution for full ML: 872.31 seconds (0.24 hr)
+Note: This is for proof-of-concept only; if running this pipeline for publication, you'll want to adjust # of bootstraps & change model to what best fits your data
+
+Outputs:
+```bash
+RAxML_bestTree.WAG.10bp
+RAxML_bipartitions.WAG.10bp
+RAxML_bipartitionsBranchLabels.WAG.10bp
+RAxML_bootstrap.WAG.10bp
+RAxML_info.WAG.10bp
+```
+
+Can find some interesting info in `RAxML_info.WAG.10bp`. 
 
 ## Step 4: Color best gene tree based on signal peptide predictions
+
+### What happened?
+
+1. Signal peptides were predicted from full protein sequences using SignalP
+2. 
+3. 
+4. 
 
 You will find a new directory `tmp/` which will contain many files including:
 

@@ -79,8 +79,11 @@ cd scripts
 # ##########################################################################
 
 # #### Curate & Align VAPs | Prepare for tree-building
-# bash curate-align.sh
+bash curate-align.sh
 
 # #### Build RAxML tree
-bash raxml.sh
+# bash raxml.sh
+
+# #### Get SignalP predictions
+signalp -t euk -f short VAPs_unique_clean-names.fasta > test_test_test.signalp
 
