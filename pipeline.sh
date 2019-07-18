@@ -87,3 +87,6 @@ bash curate-align.sh
 # #### Get SignalP predictions
 signalp -t euk -f short VAPs_unique_clean-names.fasta > test_test_test.signalp
 
+# #### Prepare signalP output for tree annotation
+grep -v "#" VAPs.signalp | awk '{print $1 "\t" $10}' > VAPs.signalp.csv
+
