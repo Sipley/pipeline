@@ -1,55 +1,64 @@
-# Make a data & tmp folder that will hold retrieved data & intermediate files
-# Enter 'scripts' directory
-mkdir tmp
-mkdir data
+# # Make a data & tmp folder that will hold retrieved data & intermediate files
+# # Enter 'scripts' directory
+# mkdir tmp
+# mkdir data
 cd scripts
 
-####################################################################
-#### # Download required databases # ###############################  
-# Databases current as of 2019-07-17 are incl in 'databases/'      #
-# Uncomment below only if these are now out of date                #
-#################################################################### 
-python3 get_databases.py
-# if ls ../databases/*gz &>/dev/null
+##########################################################################
+# STEP 1
+##########################################################################
+
+# #### # Download required databases  #   
+# python3 get_databases.py # uncomment if prefer to use python
+# # bash get_databases.sh # comment if prefer to use python
+# if ls ../tmp/*gz &>/dev/null
 # then
-# 	gunzip ../databases/*
+# 	gunzip ../tmp/*
 # 	echo 'Done getting current versions of required databases'
 # else
 # 	echo 'There was an issue retrieving required databases. Exiting...'
 # 	exit 1
 # fi
-####################################################################
-# If you uncommented the box above, then comment the box below     #
-####################################################################
-# gunzip ../databases/*
-####################################################################
-####################################################################
 
-# # Download query sequence of interest from GenBank
+# #### # Download query sequence of interest from GenBank  #   
 # python3 get_query.py
+# file="../data/query_672885886.fasta"
+# if [ -s "$file" ] 
+# then
+# 	echo "Moving on..."
+# else
+# 	echo "$file is empty. Aborting..."
+# 	exit 1
+# fi
 
-# # Download transcriptome(s)/genome(s) of interest from wormbase ParaSite
-# # wormbase ParaSite (WBPS) is the largest, most current database of all things parasitic worms
+# #### # Download transcriptome(s)/genome(s) of interest from wormbase ParaSite  # 
+# # # wormbase ParaSite (WBPS) is the largest, most current database of all things parasitic worms #  
 # python3 get_transcriptome.py
 # if ls ../data/*gz &>/dev/null
 # then
 # 	gunzip ../data/*
-# 	echo 'Done getting transcriptome of interest'
+# 	echo 'Done with STEP 1! Moving on to STEP 2...'
+# 	# echo 'Done with STEP 1! Would you like to go proceed to STEP 2? (yes/no)'
+# 	# read varname
 # else
 # 	echo 'There was an issue retrieving transcriptome. Exiting...'
 # 	exit 1
 # fi
 
+##########################################################################
+# STEP 2
+##########################################################################
+
 # # BLAST query against transcriptomes(s)/genome(s) of interest
-# bash blast.sh
-# FILE=../tmp/potential_VAPs.fasta
-# if [ -f "$FILE" ]
-# then
-# 	echo 'BLAST+ successfully completed'
-# else
-# 	echo 'There was an issue with BLAST+'
-# 	exit 1
-# fi
+bash blast.sh
+FILE=../tmp/potential_VAPs.fasta
+if [ -f "$FILE" ]
+then
+	echo 'BLAST+ successfully completed'
+else
+	echo 'There was an issue with BLAST+'
+	exit 1
+fi
 
 # # Translate potential VAP hits to protein
 # # bash transdecoder.sh
