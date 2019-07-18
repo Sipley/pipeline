@@ -137,8 +137,8 @@ PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 Please *fork* this repository and clone the directory from your GitHub to your local machine. Then cd into the `scripts` directory and run `pipeline.sh` (ignore the warning message):
 ```bash
 git clone https://github.com/<YOUR GITHUB USERNAME>/pipeline.git
-cd pipeline/data
-bash pipeline.sh
+cd pipeline
+bash scripts/pipeline.sh
 ```
 
 ### Output
