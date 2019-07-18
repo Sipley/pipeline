@@ -31,7 +31,7 @@ def getQuery(email, db, term, path=None, path_to_download_query=None):
 			try:
 				net_handle = Entrez.efetch(db=db, id=id, rettype="fasta", retmode="text")
 			except HTTPError as err:
-				if 500 <= err.code <= 599:
+				if 400 <= err.code <= 599:
 					print("Received error from server %s" % err)
 					print("Attempt %i of 10" % attempt)
 					time.sleep(15)
