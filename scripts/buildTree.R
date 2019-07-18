@@ -1,3 +1,11 @@
+#!/usr/bin/env Rscript
+
+# set mirror
+local({r <- getOption("repos")
+       r["CRAN"] <- "http://cran.r-project.org" 
+       options(repos=r)
+})
+
 # Install required packages
 install.packages("tidyverse")
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -11,7 +19,8 @@ library(ggtree)
 library(phangorn)
 
 # Set working directory
-setwd("~/Documents/MS/pipeline/tmp/")
+# setwd("/usr/local/pipeline/tmp/")
+setwd("~/Documents/MS/pipeline/tmp")
 
 # Load maximum-likelihood tree
 tree <- read.tree("RAxML_bipartitionsBranchLabels.WAG.10bp")
@@ -28,7 +37,6 @@ dd <- read.csv("VAPs.signalp.csv",
 p1 <- ggtree(tree_midroot, layout="circular", aes(color=signalP)) %<+% dd +
   geom_tippoint(aes(color=signalP),alpha=1,size=0.5) +
   theme(legend.position = c(1,0.5))
-p1
 
 png("tree_signalp.png", width=622)
 p1
