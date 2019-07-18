@@ -19,8 +19,8 @@ library(ggtree)
 library(phangorn)
 
 # Set working directory
-# setwd("/usr/local/pipeline/tmp/")
-setwd("~/Documents/MS/pipeline/tmp")
+setwd("/usr/local/pipeline/tmp/")
+# setwd("~/Documents/MS/pipeline/tmp")
 
 # Load maximum-likelihood tree
 tree <- read.tree("RAxML_bipartitionsBranchLabels.WAG.10bp")

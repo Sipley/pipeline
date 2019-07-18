@@ -172,7 +172,7 @@ PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 ### For this tutorial, we will use the publicly available transcriptome of _Schistosoma mansoni_
 
-Please *fork* this repository and clone the directory from your GitHub to your local machine. Then cd into the `scripts` directory and run `pipeline.sh` (ignore the warning message):
+Please *fork* this repository and clone the directory from your GitHub to your local machine in `usr/local`. Then cd into the `scripts` directory and run `pipeline.sh` (ignore the warning message):
 ```bash
 git clone https://github.com/<YOUR GITHUB USERNAME>/pipeline.git
 cd pipeline
@@ -258,31 +258,35 @@ Can find some interesting info in `RAxML_info.WAG.10bp`.
 ### What happened?
 
 1. Signal peptides were predicted from full protein sequences using SignalP
-2. 
-3. 
-4. 
+2. A `.png` file was created with the RAxML tree with signal peptide predictions mapped onto it
 
 You will find a new directory `tmp/` which will contain many files including:
 
 ```bash
-Pfam-A.hmm					potential_VAPs.fasta.transdecoder.cds
-Pfam-A.hmm.h3f					potential_VAPs.fasta.transdecoder.gff3
-Pfam-A.hmm.h3i					potential_VAPs.fasta.transdecoder.pep
-Pfam-A.hmm.h3m					potential_VAPs.fasta.transdecoder_dir
-Pfam-A.hmm.h3p					problematic-VAPs.txt
-blast.db.nhr					sprot-hits_VAPs.blastp
-blast.db.nin					sprot.db.phr
-blast.db.nog					sprot.db.pin
-blast.db.nsd					sprot.db.pog
-blast.db.nsi					sprot.db.psd
-blast.db.nsq					sprot.db.psi
-blast.tblastn					sprot.db.psq
-blast_hits.fasta				test_moreThan75percentHit_names.txt
-contigLure.txt					transdecoder-VAP_names.txt
-pfam-CRISP_names.txt				transdecoder-complete_VAPs.pep
-pfam-hits_VAPs.domtblout			transdecoder-complete_VAPs_75-percent.pep
-pfam-validate_VAPs.domtblout			transdecoder_VAPs.pep
-potential_VAPs.fasta				uniprot_sprot.fasta
-potential_VAPs.fasta.transdecoder.bed
+Pfam-A.hmm					pfam-hits_VAPs.domtblout
+Pfam-A.hmm.h3f					pfam-validate_VAPs.domtblout
+Pfam-A.hmm.h3i					potential_VAPs.fasta
+Pfam-A.hmm.h3m					potential_VAPs.fasta.transdecoder.bed
+Pfam-A.hmm.h3p					potential_VAPs.fasta.transdecoder.cds
+RAxML_bestTree.WAG.10bp				potential_VAPs.fasta.transdecoder.gff3
+RAxML_bipartitions.WAG.10bp			potential_VAPs.fasta.transdecoder.pep
+RAxML_bipartitionsBranchLabels.WAG.10bp		potential_VAPs.fasta.transdecoder_dir
+RAxML_bootstrap.WAG.10bp			problematic-VAPs.txt
+RAxML_info.WAG.10bp				sprot-hits_VAPs.blastp
+VAPs.signalp					sprot.db.phr
+VAPs.signalp.csv				sprot.db.pin
+VAPs_unique_clean-names.fasta			sprot.db.pog
+blast.db.nhr					sprot.db.psd
+blast.db.nin					sprot.db.psi
+blast.db.nog					sprot.db.psq
+blast.db.nsd					test_moreThan75percentHit_names.txt
+blast.db.nsi					transdecoder-VAP_names.txt
+blast.db.nsq					transdecoder-complete_VAPs.pep
+blast.tblastn					transdecoder-complete_VAPs_75-percent.pep
+blast_hits.fasta				transdecoder_VAPs.pep
+contigLure.txt					transdecoder_VAPs_unique.pep
+mafft_S-mansoni_VAP.fasta			transdecoder_VAPs_unique.pep.clstr
+mafft_S-mansoni_VAP_clean-names.fasta		tree_signalp.png
+pfam-CRISP_names.txt				uniprot_sprot.fasta
 ```
 

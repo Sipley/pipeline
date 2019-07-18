@@ -17,3 +17,5 @@ then
 else
         echo "There was a problem with SignalP"
 fi
+
+grep -v "#" VAPs.signalp | awk '{print $1 "\t" $10}' > VAPs.signalp.csv
