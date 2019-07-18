@@ -201,8 +201,29 @@ This will run automatically.
 
 ### What happened?
 
-1. The VAP protein sequences were aligned using the program 'mafft'
-2. 
+1. Redudant sequences were removed using 'cd-hit'
+2. The VAP protein sequences were aligned using the program 'mafft'
+3. Header names were cleaned up
+4. RAxML was employed
+
+	a. Automatically selects best-fitting model of aa substitution (WAG)
+	b. Maximum likelihood trees inferred from 100 bootstrapped alignments (rapid)
+	c. ML search for best tree (Fast ML -> Slow ML -> Thorough ML)
+	d. Draw Bootstrap Support Valus on best-scoring ML tree
+
+Notes:
+* Alignments has 309 distinct alignment patterns
+* Proportion of gaps & completely undetermined characters: 60.48%
+* 100 Rapid Bootstraps: 367 seconds
+* Average time per Rapid Bootstrap: 3.67 seconds
+* Fast ML optimization time: 331.61 seconds
+* Slow ML search time: 133.83 seconds
+* Thorough ML search time: 39.49 seconds
+* ML search took 504.95 seconds
+* Combined Bootstrap & ML search: 872.30 seconds (0.24 hr)
+* Overall execution for full ML: 872.31 seconds (0.24 hr)
+
+## Step 4: Color best gene tree based on signal peptide predictions
 
 You will find a new directory `tmp/` which will contain many files including:
 
