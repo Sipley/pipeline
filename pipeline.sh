@@ -78,8 +78,9 @@ cd scripts
 # # STEP 3
 # ##########################################################################
 
-# # Curate & Align VAPs | Prepare for tree-building
+# #### Curate & Align VAPs | Prepare for tree-building
 bash curate-align.sh
 
-# # Build RAxML tree
+# #### Build RAxML tree
+bash raxml.sh
 
