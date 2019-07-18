@@ -6,17 +6,17 @@ echo "domain hits found"
 # wrap fasta file for proteins
 # keep only 'complete' proteins
 awk '!/^>/ { printf "%s", $0; n = "\n" } /^>/ { print n $0; n = "" } END { printf "%s", n }' potential_VAPs.fasta.transdecoder.pep > transdecoder_VAPs.pep
-echo "did a thing"
+# echo "did a thing"
 grep -A1 "complete" transdecoder_*pep > transdecoder-complete_VAPs.pep
-echo "removed all incomplete sequences"
-sed -i 's/--//g' transdecoder-complete_VAPs.pep
-echo "renaming step 1"
-sed -i '/^$/d' transdecoder-complete_VAPs.pep
-echo "renaming step 2"
+# echo "removed all incomplete sequences"
+gsed -i 's/--//g' transdecoder-complete_VAPs.pep
+# echo "renaming step 1"
+gsed -i '/^$/d' transdecoder-complete_VAPs.pep
+# echo "renaming step 2"
 
 # compare domain hits with transdecoder hits
 grep "CAP" pfam-validate_VAPs.domtblout | grep "Cysteine-rich secretory protein family" | awk '{print $4}' | sort | uniq > pfam-CRISP_names.txt 
-sed 's/\ .*//' transdecoder-complete_VAPs.pep | grep ">" | sed 's/>//' | sort | uniq > transdecoder-VAP_names.txt 
+gsed 's/\ .*//' transdecoder-complete_VAPs.pep | grep ">" | sed 's/>//' | sort | uniq > transdecoder-VAP_names.txt 
 diff transdecoder-VAP_names.txt pfam-CRISP_names.txt > problematic-VAPs.txt
 if [ -s problematic-VAPs.txt ]
 then
@@ -38,9 +38,9 @@ fi
 
 # >75%
 awk '($19-$18)>94 {print $4}' pfam-validate_VAPs.domtblout | uniq > test_moreThan75percentHit_names.txt
-while read LINE; do grep -wA1 --no-group-separator "$LINE" transdecoder-complete_VAPs.pep; done < test_moreThan75percentHit_names.txt > transdecoder-complete_VAPs_75-percent.pep
+while read LINE; do grep -wA1 "$LINE" transdecoder-complete_VAPs.pep | grep -v -- "^--$"; done < test_moreThan75percentHit_names.txt > transdecoder-complete_VAPs_75-percent.pep
 FILE=../tmp/transdecoder-complete_VAPs_75-percent.pep
-if [ -f "$FILE"]
+if [ -f "$FILE" ]
 then
 	echo "You have selected to only keep VAPs with at greater than 75% CRISP domain coverage - no prob"
 fi
