@@ -49,36 +49,40 @@ cd scripts
 # # STEP 2
 # ##########################################################################
 
-# BLAST query against transcriptomes(s)/genome(s) of interest
-bash blast.sh
-FILE=../tmp/potential_VAPs.fasta
-if [ -f "$FILE" ]
-then
-	echo 'BLAST+ successfully completed'
-else
-	echo 'There was an issue with BLAST+'
-	exit 1
-fi
+# #### BLAST query against transcriptomes(s)/genome(s) of interest
+# bash blast.sh
+# FILE=../tmp/potential_VAPs.fasta
+# if [ -f "$FILE" ]
+# then
+# 	echo 'BLAST+ successfully completed'
+# else
+# 	echo 'There was an issue with BLAST+'
+# 	exit 1
+# fi
 
-# Translate potential VAP hits to protein
-bash transdecoder.sh
-FILE=../tmp/potential_VAPs.fasta.transdecoder.pep 
-if [ -f "$FILE" ]
-then
-	echo 'Successfully translated VAPs'
-else
-	echo 'There was an issue with TransDecoder'
-	exit 1
-fi
+# #### Translate potential VAP hits to protein
+# bash transdecoder.sh
+# FILE=../tmp/potential_VAPs.fasta.transdecoder.pep 
+# if [ -f "$FILE" ]
+# then
+# 	echo 'Successfully translated VAPs'
+# else
+# 	echo 'There was an issue with TransDecoder'
+# 	exit 1
+# fi
 
-# Validate VAPs
-bash validate.sh
+# #### Validate VAPs
+# bash validate.sh
+
+# ##########################################################################
+# # STEP 3
+# ##########################################################################
 
 # # Align VAPs
 # # unique
-# cd tmp
-# cd-hit -i transdecoder_VAPs.pep -o transdecoder_VAPs_unique.pep -c 1
-# mafft  --auto --reorder "transdecoder_VAPs_unique.pep" > "mafft_S-mansoni_VAP.fasta"
-# sed 's/.* />/' tmp/mafft_S-mansoni_VAP.fasta | sed 's/(.)//' | sed 's/:.*//' > tmp/mafft_S-mansoni_VAP_clean-names.fasta
+cd ../tmp
+cd-hit -i transdecoder_VAPs.pep -o transdecoder_VAPs_unique.pep -c 1
+mafft  --auto --reorder "transdecoder_VAPs_unique.pep" > "mafft_S-mansoni_VAP.fasta"
+sed 's/.* />/' tmp/mafft_S-mansoni_VAP.fasta | sed 's/(.)//' | sed 's/:.*//' > tmp/mafft_S-mansoni_VAP_clean-names.fasta
 # # Build RAxML tree
 
