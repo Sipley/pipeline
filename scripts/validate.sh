@@ -15,7 +15,7 @@ sed 's/\ .*//' transdecoder-complete_VAPs.pep | grep ">" | sed 's/>//' | sort | 
 diff transdecoder-VAP_names.txt pfam-CRISP_names.txt > problematic-VAPs.txt
 if [ -s problematic-VAPs.txt ]
 then
-	echo "Looks like some VAPs may need a closer look. Please check 'problematic-VAPs.txt' and remove un-validated VAPs from 'transdecoder-complete_VAPs.pep' before continuing."
+	echo "Looks like some VAPs may need a closer look. Please check 'tmp/problematic-VAPs.txt' and remove un-validated VAPs from 'transdecoder-complete_VAPs.pep' before continuing."
 	exit 1
 else
 	echo "No problems here! All VAPs successfully validated."
