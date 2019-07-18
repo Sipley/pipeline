@@ -49,30 +49,30 @@ cd scripts
 # # STEP 2
 # ##########################################################################
 
-# # BLAST query against transcriptomes(s)/genome(s) of interest
-# bash blast.sh
-# FILE=../tmp/potential_VAPs.fasta
-# if [ -f "$FILE" ]
-# then
-# 	echo 'BLAST+ successfully completed'
-# else
-# 	echo 'There was an issue with BLAST+'
-# 	exit 1
-# fi
+# BLAST query against transcriptomes(s)/genome(s) of interest
+bash blast.sh
+FILE=../tmp/potential_VAPs.fasta
+if [ -f "$FILE" ]
+then
+	echo 'BLAST+ successfully completed'
+else
+	echo 'There was an issue with BLAST+'
+	exit 1
+fi
 
-# # Translate potential VAP hits to protein
-# bash transdecoder.sh
-# FILE=../tmp/potential_VAPs.fasta.transdecoder.pep 
-# if [ -f "$FILE" ]
-# then
-# 	echo 'Successfully translated VAPs'
-# else
-# 	echo 'There was an issue with TransDecoder'
-# 	exit 1
-# fi
+# Translate potential VAP hits to protein
+bash transdecoder.sh
+FILE=../tmp/potential_VAPs.fasta.transdecoder.pep 
+if [ -f "$FILE" ]
+then
+	echo 'Successfully translated VAPs'
+else
+	echo 'There was an issue with TransDecoder'
+	exit 1
+fi
 
-# # Validate VAPs
-# bash validate.sh
+# Validate VAPs
+bash validate.sh
 
 # # Align VAPs
 # # unique

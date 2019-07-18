@@ -1,13 +1,18 @@
 cd ../tmp/
 
 hmmscan --cpu 6 --domtblout pfam-validate_VAPs.domtblout Pfam-A.hmm potential_VAPs.fasta.transdecoder.pep
+echo "domain hits found"
 
 # wrap fasta file for proteins
 # keep only 'complete' proteins
 awk '!/^>/ { printf "%s", $0; n = "\n" } /^>/ { print n $0; n = "" } END { printf "%s", n }' potential_VAPs.fasta.transdecoder.pep > transdecoder_VAPs.pep
+echo "did a thing"
 grep -A1 "complete" transdecoder_*pep > transdecoder-complete_VAPs.pep
+echo "removed all incomplete sequences"
 sed -i 's/--//g' transdecoder-complete_VAPs.pep
+echo "renaming step 1"
 sed -i '/^$/d' transdecoder-complete_VAPs.pep
+echo "renaming step 2"
 
 # compare domain hits with transdecoder hits
 grep "CAP" pfam-validate_VAPs.domtblout | grep "Cysteine-rich secretory protein family" | awk '{print $4}' | sort | uniq > pfam-CRISP_names.txt 
