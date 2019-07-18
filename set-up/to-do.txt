@@ -4,4 +4,10 @@ Local machine?
 
 ADD test for sed -i (y = 2x)
 Generalize shell scripts
-Rename headers post-transdecoder
+√ Rename headers post-transdecoder 
+
+Add Table 1 references to works cited
+Add successfuly identified all known VAPs from 'S. mansoni' transcriptome (+8 more)
+	Compare with Chalmers 2008
+Secondary structure in RAxML?
+Species tree?

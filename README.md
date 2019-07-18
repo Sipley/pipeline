@@ -117,7 +117,13 @@ Don't forget to add to path:
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 ```
 
-* Maybe another
+* cd-hit
+
+This should work:
+```bash
+conda install -c bioconda cd-hit 
+```
+
 * Perhaps one more
 
 </details>
