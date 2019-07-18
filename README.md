@@ -65,8 +65,8 @@ To install with `anaconda` on mac:
 conda install hmmer
 ```
 
-#### [Swiss-Prot database](https://www.uniprot.org/downloads) (Included)
-#### Pfam database: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release (Included)
+#### [Swiss-Prot database](https://www.uniprot.org/downloads) 
+#### Pfam database: ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release 
 
 </details>
 
@@ -94,6 +94,15 @@ export PATH
 
 </details>
 
+<details><summary>CD-HIT</summary><br>
+
+This should work:
+```bash
+conda install -c bioconda cd-hit 
+```
+
+</details>
+
 <details><summary>FTP (Optional)</summary><br>
 
 If on mac, get `ftp` by running:
@@ -117,13 +126,6 @@ Don't forget to add to path:
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 ```
 
-* cd-hit
-
-This should work:
-```bash
-conda install -c bioconda cd-hit 
-```
-
 * Perhaps one more
 
 </details>
@@ -144,6 +146,8 @@ Please *fork* this repository and clone the directory from your GitHub to your l
 ```bash
 git clone https://github.com/<YOUR GITHUB USERNAME>/pipeline.git
 cd pipeline
+cd tmp
+
 bash scripts/pipeline.sh
 ```
 
@@ -189,7 +193,7 @@ This will run automatically.
 ### What heppened?
 
 1. Sequences expressed in _Schistosoma mansoni_ that are homologous to the solved structure of _Schistosoma mansoni_ were identified using BLAST+ & saved in a new `tmp/` directory as `potential_VAPs.fasta`
-2. Potential VAP sequences were translated to protein and validated as VAPs via CAP && CRISP domain presence
+2. Potential VAP sequences were translated to protein and validated as VAPs via CRISP domain presence
 
 ## Step 3: Infer the best gene tree for your gene family of interest
 
@@ -203,14 +207,24 @@ This will run automatically.
 You will find a new directory `tmp/` which will contain many files including:
 
 ```bash
-blast.db.nsd	pfam-hits_VAPs.domtblout	snp-sites.out.phylip					sprot.db.psq
-Pfam-A.hmm		blast.db.nsi				pfam-validate_VAPs.domtblout			snp-sites.out.snp_sites.aln		transdecoder-VAP_names.txt
-Pfam-A.hmm.h3f	blast.db.nsq				potential_VAPs.fasta					snp-sites.out.vcf				transdecoder-complete_VAPs.pep
-Pfam-A.hmm.h3i	blast.tblastn				potential_VAPs.fasta.transdecoder.bed	sprot-hits_VAPs.blastp			transdecoder-names.txt
-Pfam-A.hmm.h3m	blast_hits.fasta			potential_VAPs.fasta.transdecoder.cds	sprot.db.phr					transdecoder_VAPs.pep
-Pfam-A.hmm.h3p	contigLure.txt				potential_VAPs.fasta.transdecoder.gff3	sprot.db.pin					uniprot_sprot.fasta
-blast.db.nhr	mafft_S-mansoni_VAP.fasta	potential_VAPs.fasta.transdecoder.pep	sprot.db.pog
-blast.db.nin	mafft_S-mansoni_VAP.out		potential_VAPs.fasta.transdecoder_dir	sprot.db.psd
-blast.db.nog	pfam-CRISP_names.txt		problematic-VAPs.txt					sprot.db.psi
+Pfam-A.hmm					potential_VAPs.fasta.transdecoder.cds
+Pfam-A.hmm.h3f					potential_VAPs.fasta.transdecoder.gff3
+Pfam-A.hmm.h3i					potential_VAPs.fasta.transdecoder.pep
+Pfam-A.hmm.h3m					potential_VAPs.fasta.transdecoder_dir
+Pfam-A.hmm.h3p					problematic-VAPs.txt
+blast.db.nhr					sprot-hits_VAPs.blastp
+blast.db.nin					sprot.db.phr
+blast.db.nog					sprot.db.pin
+blast.db.nsd					sprot.db.pog
+blast.db.nsi					sprot.db.psd
+blast.db.nsq					sprot.db.psi
+blast.tblastn					sprot.db.psq
+blast_hits.fasta				test_moreThan75percentHit_names.txt
+contigLure.txt					transdecoder-VAP_names.txt
+pfam-CRISP_names.txt				transdecoder-complete_VAPs.pep
+pfam-hits_VAPs.domtblout			transdecoder-complete_VAPs_75-percent.pep
+pfam-validate_VAPs.domtblout			transdecoder_VAPs.pep
+potential_VAPs.fasta				uniprot_sprot.fasta
+potential_VAPs.fasta.transdecoder.bed
 ```
 
