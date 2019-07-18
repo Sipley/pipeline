@@ -103,7 +103,9 @@ conda install -c bioconda cd-hit
 
 </details>
 
-<details><summary>[SignalP version 5.0](http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?signalp)</summary><br>
+<details><summary>SignalP</summary><br>
+
+#### [SignalP version 4.1](http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?signalp)
 
 You'll have to install this yourself by requesting an academic download.  Be sure you install the correct version for your system (if not mac `Darwin`).  Please follow instructions carefully and make sure the exectuables are in your PATH; it's important that the file structure of the original download is conserved for `SignalP` to find the correct executables. It is strongly advised that you decompress the tarball for this download in your `/usr/local/bin`
 
