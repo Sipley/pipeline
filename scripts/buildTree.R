@@ -19,7 +19,7 @@ library(ggtree)
 library(phangorn)
 
 # Set working directory
-setwd("/usr/local/pipeline/tmp/")
+setwd("~/pipeline/tmp")
 # setwd("~/Documents/MS/pipeline/tmp")
 
 # Load maximum-likelihood tree
