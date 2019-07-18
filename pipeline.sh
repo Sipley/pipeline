@@ -78,11 +78,8 @@ cd scripts
 # # STEP 3
 # ##########################################################################
 
-# # Align VAPs
-# # unique
-cd ../tmp
-cd-hit -i transdecoder-complete_VAPs_75-percent.pep -o transdecoder_VAPs_unique.pep -c 1
-mafft  --auto --reorder transdecoder_VAPs_unique.pep > mafft_S-mansoni_VAP.fasta
-sed 's/.* />/' mafft_S-mansoni_VAP.fasta | sed 's/(.)//' | sed 's/:.*//' > mafft_S-mansoni_VAP_clean-names.fasta
+# # Curate & Align VAPs | Prepare for tree-building
+bash curate-align.sh
+
 # # Build RAxML tree
 
